@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>A Little Surprise 💗</title>
+    <link rel="icon" type="img\x-icom" href="phool.jpeg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hearts"></div>
+
+<!-- Full Screen Image Viewer -->
+<div id="imageViewer" class="image-viewer">
+  <span id="closeViewer">&times;</span>
+  <img id="fullScreenImage" src="" alt="Full Screen Image">
+</div>
+
+    <main class="app">
+      <!-- Password Screen -->
+      <section class="screen active" id="password">
+        <div class="emoji">🔐💗</div>
+
+        <p class="eyebrow">A LITTLE SECRET FOR YOU</p>
+
+        <h1>Hey Rabia! 🥰</h1>
+
+        <p class="sub">Enter the secret password to open your surprise 💌</p>
+
+        <form id="passwordForm">
+          <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter password..."
+            autocomplete="off"
+            required
+          />
+
+          <button class="primary" type="submit">Unlock My Surprise ❤️</button>
+        </form>
+
+        <p id="passwordError" class="hint"></p>
+      </section>
+      <section class="screen" id="welcome">
+        <div class="flower-container">
+          <canvas id="flowerCanvas"></canvas>
+        </div>
+
+        <p class="flower-name">For My Rabia ❤️</p>
+        <div class="emoji">💗</div>
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+        <h1>Hey, Rabia, Shehzaadi! 🥹</h1>
+        <p class="sub">I made something special just for you.</p>
+        <p class="sub">Ready to see what's in my heart?</p>
+        <button class="primary" data-next="music">
+          Open My little surprise ✨
+        </button>
+      </section>
+      <section class="screen" id="music">
+        <div class="emoji">🎵</div>
+        <p class="eyebrow">A SONG JUST FOR YOU</p>
+        <h1>Play our little love song 💗</h1>
+        <p class="sub">
+          Surprise shuru karne se pehle song play karo. song1 or song2 your
+          choice 🥹
+        </p>
+
+        <div class="music-box">
+          <div class="music-disc">♫</div>
+
+          <b id="songTitle">Our Love Song ❤️</b>
+
+          <div class="song-options">
+            <button
+              class="song-option"
+              data-song="assets/song1.mp4"
+              data-title="Our Love Song ❤️"
+            >
+              🎵 Song 1
+            </button>
+
+            <button
+              class="song-option"
+              data-song="assets/song2.mp4"
+              data-title="Our Second Love Song 💕"
+            >
+              💗 Song 2
+            </button>
+          </div>
+
+          <audio id="loveSong" controls></audio>
+        </div>
+        <div class="buttons">
+          <button class="primary" data-next="proposal">
+            Song ready — continue 💞</button
+          ><button class="secondary" data-next="proposal">Skip song ⏭️</button>
+        </div>
+      </section>
+      <section class="screen" id="proposal">
+        <div class="emoji">💌</div>
+        <p class="eyebrow">ONE IMPORTANT QUESTION</p>
+        <h1>Rabia,I realy like you, Do you want to be my girlfriend? 💍</h1>
+        <p class="sub">Tum meri smile ki wajah ho. So… what do you say? ❤️</p>
+        <p class="sub">
+          If Do you want to be my girlfriend. press 'yes' otherwise you will
+          press 'No'. ❤️
+        </p>
+        <div class="buttons">
+          <button class="primary" id="yesBtn">YES! 💖</button
+          ><button class="secondary" id="noBtn">No 🙈</button>
+        </div>
+        <p id="noMessage" class="hint"></p>
+      </section>
+      <section class="screen" id="celebration">
+        <div class="emoji">🥹💞</div>
+        <h1>Yayyy! Rabia said YES! 🎉</h1>
+        <p class="sub">
+          Tum mere liye bohat special ho. Here's a little journey made with
+          love.
+        </p>
+        <button class="primary" data-next="gallery">
+          Continue, my love 💗
+        </button>
+      </section>
+      <section class="screen" id="gallery">
+        <div class="emoji">🌸</div>
+        <p class="eyebrow">LITTLE MOMENTS, BIG FEELINGS</p>
+        <h1>Our Little Gallery</h1>
+        <p class="sub">Your best picture</p>
+        <div class="photo-grid">
+          <div class="photo">
+            <img src="assets/future.jpeg" />
+            <b
+              >You are not just my favourite person,You are the owner of my
+              heart 💗🌸</b
+            >
+          </div>
+
+          <div class="photo">
+            <img src="assets/My dream.jpeg" />
+            <b
+              >Your voice is medicine,Your smile is heaven,Your eyes are like
+              stars,Your face is like the moon.!!💗🌸</b
+            >
+          </div>
+
+          <div class="photo">
+            <img src="assets/Mylove.jpeg" />
+            <b>Dunya ka sab sa chota mulk mera💗 ha </b>
+            <b>Jis ki kul Abaadi 1 shakhs ha or woh Aap hain Jaan🫶</b>
+          </div>
+          <div class="photo">
+            <img src="assets/onlyyou.jpeg" />
+            <b>The smallest country in the world is my heart💗,</b>
+            <b>whose only citizen is you, my beloved🫶</b>
+          </div>
+          <div class="photo">
+            <img src="assets/Rabia1.jpeg" />
+            <b>I Love You</b>
+            <b>Mari JAAN Rabia</b>
+            <b>Koji🥰</b>
+          </div>
+          <div class="photo">
+            <img src="assets/Rabia2.jpeg" />
+            <b>I Love You</b>
+            <b>Mari JAAN Rabia</b>
+            <b>Koji🥰</b>
+          </div>
+          <div class="photo">
+            <img src="assets/Moez 14.jpeg" />
+            <b
+              >👶❤️ Chand sa chehra, masoom si muskaan, 🌸 Is nanhi si jaan mein
+              basti hai sabki jaan. 🥰 🧿 Allah hamesha buri nazar se
+              bachaye.Aameen. ❤️</b
+            >
+          </div>
+          <div class="photo">
+            <img src="assets/Moez.jpeg" />
+            <b
+              >👶💕 A little bundle of joy with the sweetest smile! 🥰🌸 May
+              Allah always protect you and keep you smiling. 🧿❤️
+            </b>
+          </div>
+          <div class="photo">
+            <img src="assets/R.jpeg" />
+            <b
+              >تم سامنے ہو تو لفظ نہیں ملتے، تم دور ہو تو خیال ختم نہیں ہوتے۔</b
+            >
+          </div>
+          <div class="photo">
+            <img src="assets/ana.jpeg" />
+            <b
+              >ہزاروں چہرے دیکھے ہیں اس دنیا میں، مگر دل کو سکون صرف تمہیں دیکھ
+              کر ملتا ہے۔</b
+            >
+          </div>
+
+          <div class="photo">
+            <img src="assets/hasrat.jpeg" />
+            <b
+              >میری ہر دعا میں ایک نام شامل ہے، جسے شاید خبر بھی نہیں کہ وہ کتنا
+              خاص ہے۔</b
+            >
+          </div>
+          <div class="photo">
+            <img src="assets/subah.jpeg" />
+            <b
+              >میں اور بھول جاؤں اُسے، علی! کیسے باتیں کرتے ہو؟ 🥺❤️ صورت تو
+              صورت ہے، اُس کا نام بھی پیارا لگتا ہے۔ 🥀❤️✨</b
+            >
+          </div>
+          <div class="photo">
+            <img src="assets/baagh.jpeg" />
+            <b
+              >Kitna pyaar hai tumse ye jaan lo,💗 Tum hi zindagi ho iss baat ko
+              maan lo!!</b
+            >
+            <b
+              >Tumhe dene k liye kuch bhi nahi hai mere paas Bas ek jaan hai jab
+              jee chahe maang lo !!</b
+            >
+          </div>
+          <div class="photo">
+            <img src="assets/qadam.jpeg" />
+            <b
+              >Mat muskrao itna k phoolon ko khabar lag jay.Hum kare aap ki
+              tareef aur aap ko nazar lag jay.</b
+            >
+            <b
+              >Khuda kare bahut lambi ho aap ki zindagi.Aur us par bhi humaari
+              umar lag jaaye.!!</b
+            >
+          </div>
+          <div class="photo">
+            <img src="assets/1 allah.jpeg" />
+            <b
+              >میں تمہارے لیے وہ انسان بننا چاہتا ہوں جس کو تم ہر وہ بات بتا سکو
+              جو تم دنیا کو نہیں بتا سکتی۔ 👀❤️‍🩹🕊️</b
+            >
+          </div>
+          <div class="photo">
+            <img src="assets/khaas.jpeg" />
+            <b
+              >Ek baat puchuuu" 🥺 Aaj tak meri konsi baat apko sabsee acchi
+              Lagi hai jo aapko hamesha yaad rahegi bataao..? ❤️😍😅🙈💋💋💞</b
+            >
+          </div>
+          <div class="photo">
+            <img src="assets/AR.jpeg" />
+            <b>
+              پسند ہے مجھے اپنی آنکھوں کا مغرور ہونا، اپنے کردار میں وفا رکھنا
+              کیونکہ نہ میری نگاہیں ہر کسی کی طرف اٹھتی ہیں، نہ میرا دل ہر کسی
+              پر آتا ہے؛ 🫠🤌💖🙌🔥🥺🕊️ just you</b
+            >
+          </div>
+          <div class="photo">
+            <img src="assets/muhabbat.jpeg" />
+            <b
+              >*عشق* *_مذہبِ عشق میں شرک حرام ہے، جس طرح خدا ایک ہوتا ہے اس طرح
+              محبوب بھی ایک ہونا چاہیے۔__ *شعر ہے کہ* __ہم محبت میں بھی توحید کے
+              قائل ہیں فراز ایک ہی شخص کو محبوب بنائے رکھا ہے۔_*</b
+            >
+          </div>
+        </div>
+        <button class="primary" data-next="quiz">Next surprise 🌷</button>
+      </section>
+      <section class="screen" id="quiz">
+        <div class="emoji">🧠💗</div>
+        <p class="eyebrow">A LITTLE LOVE QUIZ</p>
+        <h1>How well do you know us? 🥰</h1>
+        <p class="sub">
+          Har question ka answer choose karo. Total 5 cute questions hain! 💕
+        </p>
+        <div class="quiz-progress">
+          <span id="quizProgress"></span><span id="quizScore">Score: 0</span>
+        </div>
+        <h2 id="quizQuestion" class="quiz-question"></h2>
+        <div class="quiz-options" id="quizOptions"></div>
+        <p id="quizMessage" class="hint"></p>
+        <button class="primary hidden" id="quizNext">Next question 💗</button
+        ><button class="primary hidden" id="quizContinue" data-next="letter">
+          Read your letter 💌
+        </button>
+      </section>
+      <section class="screen" id="letter">
+        <div class="emoji">💌</div>
+        <p class="eyebrow">FROM MY HEART TO YOURS</p>
+        <h1>A Letter For You</h1>
+        <div class="letter">
+          <p><b>I Love You, Meri jaan, Rabia! 💞❤️</b></p>
+          <p>
+            Tum meri zindagi ka woh hissa ho jo mere din ko khoobsurat bana deta
+            hai. Tumhari smile mere liye bohat special hai, aur tumhari khushi
+            mere dil ke qareeb hai. 🥹💗
+          </p>
+          <p>
+            Meri Pyari Mohabbat, ❤️🥹 Tum meri khushi, mera sukoon aur mere dil
+            ki sab se khoobsurat feeling ho. 💗🫶 Hamesha apna khayal rakhna,
+            parde ka ehtimam karna aur namaz ko apni zindagi ka hissa banana,
+            kyun ke tumhari khushi ke saath tumhari aakhirat bhi mere liye
+            ahmiyat rakhti hai. 🥹🤍🕌 Main bohat khushqismat hoon ke tum meri
+            zindagi mein ho, aur dua karta hoon ke Allah humein hamesha nek
+            raaste par rakhe aur hamari mohabbat mein barkat ata farmaye. ❤️🌹 I
+            LOVE YOU SO MUCH, MERI JAAN! Tum mere liye lafzon se kahin zyada
+            special ho. 💋💞🌸
+          </p>
+          <p>
+            آنکھیں بند کروں تو دیدار تیرا 😍 آنکھیں کھولوں تو خیال تیرا 👀 دیکھ
+            کتنی خوبصورت محبت ہے میری ❤️ دل میرا اور قبضہ تیرا 🤍 💓 😮‍💨 😢 I
+            love you jaan ❣️
+          </p>
+          <p class="signature">Hamesha Tumhara, Ali. 💌🌹💞</p>
+        </div>
+        <button class="primary" data-next="surprise">
+          One last surprise… 🎁
+        </button>
+      </section>
+      <section class="screen" id="surprise">
+        <div class="emoji">🎁</div>
+        <p class="eyebrow">SAVED JUST FOR YOU</p>
+        <h1>Last Surprise 💖</h1>
+        <p class="sub">Meri taraf se chhota sa video surprise. 🥹</p>
+        <div class="video-frame">
+          <video id="surpriseVideo" controls>
+            <source src="assets/Love video.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="video-frame">
+          <video id="surpriseVideo" controls>
+            <source src="assets/v2.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="video-frame">
+          <video id="surpriseVideo" controls>
+            <source src="assets/v1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="video-frame">
+          <video id="surpriseVideo" controls>
+            <source src="assets/take care.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="video-frame">
+          <video id="surpriseVideo" controls>
+            <source src="assets/parda.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="video-frame">
+          <video id="surpriseVideo" controls>
+            <source src="assets/Rabia beauti.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="video-frame">
+          <video id="surpriseVideo" controls>
+            <source src="assets/jelasy.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <button class="primary" data-next="final">Finish with love 💗</button>
+      </section>
+      <section class="screen" id="final">
+        <div class="emoji">💖🌙</div>
+        <h1>That's all, meri jaan!</h1>
+        <p class="sub">
+          I hope this little surprise made you smile. Take care, keep smiling,
+          and remember you're special. 🌷
+        </p>
+        <button class="primary" id="readHeartBtn">
+          <a
+            href="https://developer78th.github.io/Love-message/"
+            target="_blank"
+            class="primary"
+          >
+            Click me❤️💌
+          </a>
+        </button>
+
+        <div id="heartText" class="hidden"></div>
+      </section>
+    </main>
+    <footer>Made with 💗, just for Rabia</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
