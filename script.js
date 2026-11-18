@@ -1,3 +1,37 @@
+// ================= FIREBASE SETUP =================
+
+const firebaseConfig = {
+  apiKey: "YAHAN_APNI_API_KEY_PASTE_KARO",
+  authDomain: "rabia-love-website.firebaseapp.com",
+  projectId: "rabia-love-website",
+  storageBucket: "rabia-love-website.firebasestorage.app",
+  messagingSenderId: "213023509417",
+  appId: "1:213023509417:web:2724fd35087636c56012b8"
+};
+
+// Firebase initialize
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+
+// Rabia ka response Firebase mein save karna
+async function saveRabiaResponse(answer) {
+  try {
+    await db.collection("responses").add({
+      name: "Rabia",
+      response: answer,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    console.log("Response Firebase mein save ho gaya:", answer);
+    return true;
+
+  } catch (error) {
+    console.error("Firebase Error:", error);
+    alert("Response save nahi hua. Internet check karein.");
+    return false;
+  }
+}
 const screens = [...document.querySelectorAll(".screen")];
 
 function showScreen(id) {
@@ -14,7 +48,7 @@ document.getElementById("passwordForm").addEventListener("submit", (e) => {
   const password = document.getElementById("passwordInput").value;
   const error = document.getElementById("passwordError");
 
-  if (password === "Rabia") {
+  if (password === "R") {
     error.textContent = "";
     document.getElementById("passwordInput").value = "";
 
@@ -55,15 +89,52 @@ document.querySelectorAll("[data-next]").forEach((button) => {
 });
 
 // YES button
-document.getElementById("yesBtn").addEventListener("click", () => {
-  flyRomanticEmojis(60);
-  showScreen("celebration");
-});
+// document.getElementById("yesBtn").addEventListener("click", () => {
+//   flyRomanticEmojis(60);
+//   showScreen("celebration");
+// });
 
 // NO button messages
+// let nc = 0;
+
+// document.getElementById("noBtn").addEventListener("click", () => {
+//   const messages = [
+//     "No button tumhara hai, lekin please soch lo 🙈💗",
+//     "Are you sure? 🥺💗",
+//     "Ek baar phir soch lo na! 🌸",
+//     "Mera dil keh raha hai YES! 😭💕",
+//     "Please thora aur soch lo na 🥹💞",
+//     "I Love You 💞💗"
+//   ];
+
+//   document.getElementById("noMessage").textContent =
+//     messages[nc % messages.length];
+
+//   nc++;
+//   flyRomanticEmojis(12);
+// });
+// ================= YES BUTTON =================
+
+document.getElementById("yesBtn").addEventListener("click", async () => {
+
+  const saved = await saveRabiaResponse("YES");
+
+  if (!saved) return;
+
+  flyRomanticEmojis(60);
+  showScreen("celebration");
+
+});
+// ================= NO BUTTON =================
+
 let nc = 0;
 
-document.getElementById("noBtn").addEventListener("click", () => {
+document.getElementById("noBtn").addEventListener("click", async () => {
+
+  const saved = await saveRabiaResponse("NO");
+
+  if (!saved) return;
+
   const messages = [
     "No button tumhara hai, lekin please soch lo 🙈💗",
     "Are you sure? 🥺💗",
@@ -77,7 +148,9 @@ document.getElementById("noBtn").addEventListener("click", () => {
     messages[nc % messages.length];
 
   nc++;
+
   flyRomanticEmojis(12);
+
 });
 
 // Quiz questions
