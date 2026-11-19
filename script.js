@@ -48,7 +48,7 @@ document.getElementById("passwordForm").addEventListener("submit", (e) => {
   const password = document.getElementById("passwordInput").value;
   const error = document.getElementById("passwordError");
 
-  if (password === "R") {
+  if (password === "AR") {
     error.textContent = "";
     document.getElementById("passwordInput").value = "";
 
