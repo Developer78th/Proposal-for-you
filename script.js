@@ -88,31 +88,6 @@ document.querySelectorAll("[data-next]").forEach((button) => {
   });
 });
 
-// YES button
-// document.getElementById("yesBtn").addEventListener("click", () => {
-//   flyRomanticEmojis(60);
-//   showScreen("celebration");
-// });
-
-// NO button messages
-// let nc = 0;
-
-// document.getElementById("noBtn").addEventListener("click", () => {
-//   const messages = [
-//     "No button tumhara hai, lekin please soch lo 🙈💗",
-//     "Are you sure? 🥺💗",
-//     "Ek baar phir soch lo na! 🌸",
-//     "Mera dil keh raha hai YES! 😭💕",
-//     "Please thora aur soch lo na 🥹💞",
-//     "I Love You 💞💗"
-//   ];
-
-//   document.getElementById("noMessage").textContent =
-//     messages[nc % messages.length];
-
-//   nc++;
-//   flyRomanticEmojis(12);
-// });
 // ================= YES BUTTON =================
 
 document.getElementById("yesBtn").addEventListener("click", async () => {
