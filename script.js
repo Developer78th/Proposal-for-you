@@ -351,3 +351,76 @@ console.log("Rabia Website Loaded Successfully ❤️");
 
   requestAnimationFrame(drawFlower);
 })();
+// ========================================
+// PASSWORD SCREEN UNLOCK FIX 🔐
+// ========================================
+
+const passwordForm = document.getElementById("passwordForm");
+const passwordInput = document.getElementById("passwordInput");
+const passwordError = document.getElementById("passwordError");
+
+if (passwordForm) {
+  passwordForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const enteredPassword = passwordInput.value.trim();
+
+    // Apna password yahan set karein
+    const correctPassword = "AR";
+
+    if (enteredPassword === correctPassword) {
+
+      // Password correct
+      passwordError.textContent = "";
+
+      document.getElementById("password").classList.remove("active");
+
+      document.getElementById("welcome").classList.add("active");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    } else {
+
+      // Password incorrect
+      passwordError.textContent = "Wrong password! Try again 🥺❤️";
+
+      passwordInput.value = "";
+      passwordInput.focus();
+    }
+  });
+}
+
+
+// ========================================
+// ALL NEXT BUTTONS SCREEN NAVIGATION
+// ========================================
+
+document.querySelectorAll("[data-next]").forEach(function (button) {
+
+  button.addEventListener("click", function () {
+
+    const nextScreenId = button.getAttribute("data-next");
+
+    const currentScreen = button.closest(".screen");
+
+    const nextScreen = document.getElementById(nextScreenId);
+
+    if (currentScreen && nextScreen) {
+
+      currentScreen.classList.remove("active");
+
+      nextScreen.classList.add("active");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+  });
+
+});
