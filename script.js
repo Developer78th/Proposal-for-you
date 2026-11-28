@@ -3,7 +3,7 @@
 // ========================================
 
 const firebaseConfig = {
-  apiKey: "YAHAN_APNI_API_KEY_PASTE_KARO",
+  apiKey: "AIzaSyANr3gXGzLJRsCUTHB4ev8rXJOZ5kGaEMg",
   authDomain: "rabia-love-website.firebaseapp.com",
   projectId: "rabia-love-website",
   storageBucket: "rabia-love-website.firebasestorage.app",
